@@ -56,8 +56,8 @@ struct CoinRowView_Previews: PreviewProvider {
 }
 
 extension CoinRowView {
-    
-    private var leftView: some View {
-        
-    }
+//    
+//    private var leftView: some View {
+//        
+//    }
 }
