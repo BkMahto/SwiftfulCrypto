@@ -49,7 +49,6 @@ class NetworkingManager {
     /// ```
     /// - Parameter url: URL of data to be downloaded
     /// - Returns: AnyPublisher that can be decoded and sink() on recieved value
-    
     static func download(url: URL) -> AnyPublisher<Data, any Error> {
         return URLSession.shared.dataTaskPublisher(for: url)
             .subscribe(on: DispatchQueue.global(qos: .default))
@@ -93,7 +92,6 @@ class NetworkingManager {
     /// }
     ///  ```
     /// - Parameter completion: Subscribers.Completion<Error> -> This is the default returning of the .sink() function
-    
     static func handleCompletion(completion: Subscribers.Completion<Error>
     ) {
         switch completion {
