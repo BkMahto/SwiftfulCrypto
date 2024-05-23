@@ -14,7 +14,6 @@ class LocalFileManager {
     
     func saveImage(image: UIImage, imageName: String, folderName: String) {
         createFolderIfNeeded(folderName: folderName)
-        
         guard
             let data = image.pngData(),
             let url = getURLForImage(imageName: imageName, folderName: folderName)
@@ -39,7 +38,6 @@ class LocalFileManager {
         guard let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first
         else { return nil }
         return url.appending(path: folderName)
-        
     }
     
     private func getURLForImage(imageName: String, folderName: String) -> URL? {
@@ -58,5 +56,4 @@ class LocalFileManager {
             }
         }
     }
-    
 }
