@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C26BCB012C045906000377E4 /* PortfolioContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C26BCAFF2C045906000377E4 /* PortfolioContainer.xcdatamodeld */; };
+		C26BCB032C045D67000377E4 /* PortfolioDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26BCB022C045D67000377E4 /* PortfolioDataService.swift */; };
 		C28381C72C0078C6001952C3 /* XMarkButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28381C62C0078C6001952C3 /* XMarkButton.swift */; };
 		C28381C92C007DE2001952C3 /* CoinLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28381C82C007DE2001952C3 /* CoinLogoView.swift */; };
 		C29127332C0060A500CBEC05 /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29127322C0060A500CBEC05 /* PortfolioView.swift */; };
@@ -39,6 +41,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C26BCB002C045906000377E4 /* PortfolioConainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PortfolioConainer.xcdatamodel; sourceTree = "<group>"; };
+		C26BCB022C045D67000377E4 /* PortfolioDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataService.swift; sourceTree = "<group>"; };
+		C26BCB042C049931000377E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C28381C62C0078C6001952C3 /* XMarkButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMarkButton.swift; sourceTree = "<group>"; };
 		C28381C82C007DE2001952C3 /* CoinLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLogoView.swift; sourceTree = "<group>"; };
 		C29127322C0060A500CBEC05 /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
@@ -88,6 +93,7 @@
 				C2918F9C2BFDB67B00701331 /* CoinDataService.swift */,
 				C2918FA42BFDFC4500701331 /* CoinImageService.swift */,
 				C2A38F4B2BFF60620069FC5D /* MarketDataService.swift */,
+				C26BCB022C045D67000377E4 /* PortfolioDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -130,6 +136,7 @@
 		C299A30A2BFC7F0A00C673E9 /* SwiftfulCrypto */ = {
 			isa = PBXGroup;
 			children = (
+				C26BCB042C049931000377E4 /* Info.plist */,
 				C299A30B2BFC7F0A00C673E9 /* SwiftfulCryptoApp.swift */,
 				C2918F9E2BFDCD8100701331 /* Utilities */,
 				C299A3192BFC842C00C673E9 /* Extensions */,
@@ -226,6 +233,7 @@
 				C299A3292BFC9EFC00C673E9 /* CoinModel.swift */,
 				C2A38F432BFF38A50069FC5D /* StatisticModel.swift */,
 				C2A38F492BFF5C310069FC5D /* MarketDataModel.swift */,
+				C26BCAFF2C045906000377E4 /* PortfolioContainer.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -307,6 +315,7 @@
 				C299A31B2BFC844700C673E9 /* Color.swift in Sources */,
 				C2918FA92BFE06E200701331 /* LocalFileManager.swift in Sources */,
 				C299A3212BFC908B00C673E9 /* HomeView.swift in Sources */,
+				C26BCB012C045906000377E4 /* PortfolioContainer.xcdatamodeld in Sources */,
 				C2A38F4A2BFF5C310069FC5D /* MarketDataModel.swift in Sources */,
 				C2918FA32BFDEDCE00701331 /* CoinImageView.swift in Sources */,
 				C2A38F462BFF3A620069FC5D /* StatisticView.swift in Sources */,
@@ -327,6 +336,7 @@
 				C299A3322BFCB5C400C673E9 /* Double.swift in Sources */,
 				C2918FA52BFDFC4500701331 /* CoinImageService.swift in Sources */,
 				C299A32A2BFC9EFC00C673E9 /* CoinModel.swift in Sources */,
+				C26BCB032C045D67000377E4 /* PortfolioDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +467,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftfulCrypto/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftfulCrypto/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Crypto Tracker";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -486,6 +497,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftfulCrypto/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftfulCrypto/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Crypto Tracker";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -527,6 +539,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C26BCAFF2C045906000377E4 /* PortfolioContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C26BCB002C045906000377E4 /* PortfolioConainer.xcdatamodel */,
+			);
+			currentVersion = C26BCB002C045906000377E4 /* PortfolioConainer.xcdatamodel */;
+			path = PortfolioContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C299A3002BFC7F0A00C673E9 /* Project object */;
 }
