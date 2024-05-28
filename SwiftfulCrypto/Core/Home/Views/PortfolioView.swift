@@ -97,7 +97,7 @@ extension PortfolioView {
             HStack {
                 Text("Current Value: ")
                 Spacer()
-                Text("")
+                Text(getCurrentValue().asCurrencyWith2Decimals())
             }
         }
         .padding()
@@ -111,6 +111,7 @@ extension PortfolioView {
         HStack(spacing: 10) {
             Image(systemName: "checkmark")
                 .opacity(showCheckmark ? 1 : 0)
+                .foregroundColor(Color.theme.accent)
             Button {
                 saveButtonPresed()
             } label: {
