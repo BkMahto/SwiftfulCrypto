@@ -45,6 +45,8 @@ extension CoinRowView {
                 .font(.headline)
                 .padding(.leading)
                 .foregroundColor(Color.theme.accent)
+                .minimumScaleFactor(0.6)
+                .lineLimit(1)
         }
     }
     
@@ -52,6 +54,8 @@ extension CoinRowView {
         VStack(alignment: .trailing) {
             Text(coin.currentHoldingsValue.asCurrencyWith2Decimals())
                 .bold()
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
             Text((coin.currentHoldings ?? 0).asNumberString())
         }
         .foregroundColor(Color.theme.accent)
