@@ -13,6 +13,7 @@ struct HomeView: View {
     
     @State private var showPortfolio: Bool = false  // Animate to the right
     @State private var showPortfolioView: Bool = false  // Animate to the new Screen
+    @State private var showSettingsView: Bool = false
     @State private var selectedCoin: Coin? = nil
     @State private var showDetailView: Bool = false
     
@@ -38,10 +39,19 @@ struct HomeView: View {
                         .transition(.move(edge: .leading))
                 }
                 if showPortfolio {
-                    portfolioCoinsList
-                        .transition(.move(edge: .trailing))
+                    ZStack(alignment: .top) {
+                        if vm.portfolioCoins.isEmpty && vm.searchText.isEmpty {
+                            portfolioEmptyText
+                        } else {
+                            portfolioCoinsList
+                        }
+                    }
+                    .transition(.move(edge: .trailing))
                 }
                 Spacer(minLength: 0)
+            }
+            .sheet(isPresented: $showSettingsView) {
+                SettingsView()
             }
         }
         .navigationDestination(isPresented: $showDetailView) {
@@ -69,6 +79,8 @@ extension HomeView {
                 .onTapGesture {
                     if showPortfolio {
                         showPortfolioView.toggle()                        
+                    } else {
+                        showSettingsView.toggle()
                     }
                 }
                 .background(
@@ -156,12 +168,22 @@ extension HomeView {
                     .onTapGesture {
                         segue(coin: coin)
                     }
+                    .listRowBackground(Color.theme.background)
             }
         }
         .refreshable {
             vm.reloadData()
         }
         .listStyle(.plain)
+    }
+    
+    private var portfolioEmptyText: some View {
+        Text("You haven't added any coin to your portfolio yet. Click the + button to get started! 🧐")
+            .font(.callout)
+            .foregroundColor(Color.theme.accent)
+            .fontWeight(.medium)
+            .multilineTextAlignment(.center)
+            .padding(50)
     }
 
     private var portfolioCoinsList: some View {
@@ -172,6 +194,7 @@ extension HomeView {
                     .onTapGesture {
                         segue(coin: coin)
                     }
+                    .listRowBackground(Color.theme.background)
             }
         }
         .refreshable {
